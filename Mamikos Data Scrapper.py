@@ -15,6 +15,7 @@ import random
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, WebDriverException
 import csv # Import the csv module
 import pandas as pd # Import pandas for CSV saving
+from pathlib import Path
 
 # --- BeautifulSoup based scraping function (kept separate for clarity) ---
 def scrape_mamikos_details_from_html(html_content):
@@ -658,7 +659,9 @@ class ImprovedMamikosScraper:
 # Test the improved functionality
 if __name__ == "__main__":
     # Define the path to your CSV file
-    csv_file_path = r'D:\Python\Jabodetabek (Detailed Data)\url\mamikos_url_jakarta_timur.csv'
+    user_input = input("Enter the CSV file path: ").strip().strip('"')
+    csv_file_path = Path(user_input)
+    region = input("Input Region Name: ")
     
     scraper = ImprovedMamikosScraper()
     
@@ -670,7 +673,7 @@ if __name__ == "__main__":
         
         # Scrape products directly from the CSV URLs
         # Pass the desired region name here
-        success = scraper.scrape_products(csv_file_path, region_name="Jakarta Selatan") 
+        success = scraper.scrape_products(csv_file_path, region_name=region) 
         
         if success:
             print("\n✅ SCRAPING COMPLETED!")

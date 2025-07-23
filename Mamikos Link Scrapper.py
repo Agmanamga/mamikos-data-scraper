@@ -289,7 +289,7 @@ class ImprovedMamikosScraper:
 
 # Test the improved functionality
 if __name__ == "__main__":
-    search_url = "https://mamikos.com/cari/jakarta-timur-kota-jakarta-timur-daerah-khusus-ibukota-jakarta-indonesia/all/bulanan/0-15000000/101?keyword=Jakarta%20Timur&suggestion_type=search&rent=2&sort=price,-&price=10000-20000000&singgahsini=0"
+    search_url = input("Put Mamikos Search URL here: ")
     
     scraper = ImprovedMamikosScraper()
     
