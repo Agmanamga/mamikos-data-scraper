@@ -61,25 +61,27 @@ This script visits each kos URL (from the previous step) to extract detailed lis
 
 ### 🔎 How to Use `Mamikos Link Scrapper.py`:
 
-1. Open the script and edit the `search_url` variable to your desired Mamikos page.
-2. Optionally change the output filename in `scraper.save_links_to_csv()`.
-3. Run the script:
+1. Optionally change the output filename in `scraper.save_links_to_csv()`.
+2. Run the script:
    ```bash
    python "Mamikos Link Scrapper.py"
    ```
-4. Output: A CSV file containing all collected kos URLs.
+3. Input Search link that inteded to be scraped on the input after the script running on the first time
+4. Wait for the link scrapping process finished extracting the data
+5. if there's popup on the browser, click it manually. If not, the process cannot be done.
+6. Output: A CSV file containing all collected kos URLs.
 
 ### 🔍 How to Use `Mamikos Data Scrapper.py`:
 
-1. Set `csv_file_path` to the CSV file created by the previous script.
-2. Update filenames in `save_data_to_json()` and `save_data_to_csv()`.
-3. Define the region name using the `region_name` argument.
-4. Optional: Limit scraping by adding `max_products=50` for testing.
-5. Run the script:
+1. Update filenames in `save_data_to_json()` and `save_data_to_csv()`.
+3. Optional: Limit scraping by adding `max_products=50` for testing.
+4. Run the script:
    ```bash
    python "Mamikos Data Scrapper.py"
    ```
-6. Output: A detailed CSV and JSON file with all extracted data.
+5. Copy the file pach from link scrapper and paste it on the input after the script running
+6. Iput the region name
+7. Output: A detailed CSV and JSON file with all extracted data.
 
 ---
 
